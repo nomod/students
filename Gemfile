@@ -56,3 +56,8 @@ gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'pg'
 gem 'bootstrap-sass-extras'
+
+group :production do
+  # For Heroku deployment
+  gem 'rails_12factor'
+end
