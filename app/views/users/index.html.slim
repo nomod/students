@@ -1,0 +1,29 @@
+h1 Все студенты
+
+table.table.table-striped
+  thead
+    tr
+      th Имя
+      th Фамилия
+      th Группа
+      th Дата рождения
+      th Email
+      th
+      th
+      th
+
+  tbody
+    - @users.each do |user|
+      tr
+        td = user.name
+        td = user.surname
+        td = user.group
+        td = user.birth_date
+        td = user.email
+        td = link_to 'Просмотр', user
+        td = link_to 'Редактировать', edit_user_path(user)
+        td = link_to 'Удалить', user, data: { confirm: 'Уверены?' }, method: :delete
+
+br
+
+= link_to 'Создать нового пользователя', new_user_path

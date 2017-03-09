@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: student_admin
+  password: student
+  pool: 5
+
+development:
+  <<: *default
+  database: student_development
+
+production:
+  <<: *default
+  database: student_production
+
+test:
+  <<: *default
+  database: student_test

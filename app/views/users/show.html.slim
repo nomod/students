@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Имя:
+  = @user.name
+p
+  strong Фамилия:
+  = @user.surname
+p
+  strong Группа:
+  = @user.group
+p
+  strong Дата рождения:
+  = @user.birth_date
+p
+  strong Email:
+  = @user.email
+
+= link_to 'Редактировать', edit_user_path(@user)
+'  |
+= link_to 'Назад', users_path
